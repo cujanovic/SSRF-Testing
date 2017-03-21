@@ -9,4 +9,10 @@ http://domain.tld/image.jpeg-http-169.254.169.254:80-
 
 
 
+### AppSecEU15-Server_side_browsing_considered_harmful.pdf
+https://www.youtube.com/watch?v=8t5-A4ASTIU
+
+
+
+
 
