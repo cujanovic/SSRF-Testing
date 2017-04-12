@@ -1,12 +1,7 @@
 # SSRF Testing
 
-### .htaccess - redirect test
-http://domain.tld/image.jpeg-http-169.254.169.254:80-
+### htaccess - redirect test for various cases
 
-
-
-### json-redirect.php - json based redirect test
-http://domain.tld/json-redirect.php?url=http://169.254.169.254
 
 
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing

