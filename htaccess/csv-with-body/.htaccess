@@ -1,10 +1,10 @@
 # Set csv response body
-ErrorDocument 300 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
-ErrorDocument 301 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
-ErrorDocument 302 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
-ErrorDocument 303 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
-ErrorDocument 307 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
-ErrorDocument 308 "Device Name,Platform,OS\nAcer Iconia Tab A1-810,Android"
+ErrorDocument 300 "Device Name,Platform,OS"
+ErrorDocument 301 "Device Name,Platform,OS"
+ErrorDocument 302 "Device Name,Platform,OS"
+ErrorDocument 303 "Device Name,Platform,OS"
+ErrorDocument 307 "Device Name,Platform,OS"
+ErrorDocument 308 "Device Name,Platform,OS"
 
 # 300 with response body
 # https://ssrf.localdomain.pw/csv-with-body/300-https-169.254.169.254:80-.c.csv
