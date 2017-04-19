@@ -25,6 +25,18 @@ xml 301 response without and with a valid response body:
 `https://ssrf.localdomain.pw/xml-without-body/301-http-169.254.169.254:80-.x.xml`
 `https://ssrf.localdomain.pw/xml-with-body/301-http-169.254.169.254:80-.x.xml`
 
+
+***
+
+### ip.py - Alternate IP encoding tool useful for SSRF Testing
+
+python ip.py IP EXPORT(optional)
+
+python ip.py 169.254.169.254
+
+python ip.py 169.254.169.254 export
+
+
 ***
 
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing
