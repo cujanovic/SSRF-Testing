@@ -49,6 +49,13 @@ python ip.py 169.254.169.254 export
 
 ***
 
+### DNS pinning
+
+nslookup ssrf-169.254.169.254.localdomain.pw
+
+***
+
+
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing
 
 ***
