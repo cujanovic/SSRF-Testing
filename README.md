@@ -55,6 +55,11 @@ nslookup ssrf-169.254.169.254.localdomain.pw
 
 ***
 
+### DNS pinning race condition
+
+nslookup ssrf-race-169.254.169.254.localdomain.pw
+
+***
 
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing
 
