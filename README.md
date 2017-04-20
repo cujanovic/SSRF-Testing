@@ -3,7 +3,7 @@
 ***
 
 ### htaccess - redirect test for various cases
-Status codes: 300, 301, 302, 303, 307, 308
+Status codes: 300, 301, 302, 303, 305, 307, 308
 
 Filetypes: jpg, json, csv, xml
 #### Live demo:

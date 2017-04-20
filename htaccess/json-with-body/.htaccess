@@ -3,6 +3,7 @@ ErrorDocument 300 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 301 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 302 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 303 '{"a":[{"b":"2","c":"3"}]}'
+ErrorDocument 305 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 307 '{"a":[{"b":"2","c":"3"}]}'
 ErrorDocument 308 '{"a":[{"b":"2","c":"3"}]}'
 
@@ -33,6 +34,13 @@ RewriteRule 302-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=302,NC]
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).j.json$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/json-with-body/305-http-169.254.169.254:80-.j.json
+# https://ssrf.localdomain.pw/json-with-body/305-http-169.254.169.254:80-test/.j.json
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).j.json$
+RewriteRule 305-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=305,NC]
 
 # 307 with response body
 # https://ssrf.localdomain.pw/json-with-body/307-http-169.254.169.254:80-.j.json
