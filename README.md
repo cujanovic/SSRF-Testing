@@ -34,10 +34,9 @@ xml 301 response without and with a valid response body:
 
 `https://ssrf.localdomain.pw/xml-with-body/301-http-169.254.169.254:80-.x.xml`
 
-
 ***
 
-### custom-30x - Custom 30x responses with php
+### custom-30x - Custom 30x responses and Location header with php
 
 #### Live demo:
 
@@ -45,6 +44,21 @@ xml 301 response without and with a valid response body:
 
 ***
 
+### custom-200 - Custom 200 response and Content-Location header with php
+
+#### Live demo:
+
+`https://ssrf.localdomain.pw/custom-200/?url=http://169.254.169.254/&content-type=YXBwbGljYXRpb24vanNvbg==&body=eyJhIjpbeyJiIjoiMiIsImMiOiIzIn1dfQ==&fakext=/j.json`
+
+***
+
+### custom-201 - Custom 201 response and Location header with php
+
+#### Live demo:
+
+`https://ssrf.localdomain.pw/custom-201/?url=http://169.254.169.254/&content-type=YXBwbGljYXRpb24vanNvbg==&body=eyJhIjpbeyJiIjoiMiIsImMiOiIzIn1dfQ==&fakext=/j.json`
+
+***
 
 ### ip.py - Alternate IP encoding tool useful for SSRF Testing
 
