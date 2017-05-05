@@ -62,7 +62,9 @@ xml 301 response without and with a valid response body:
 
 ### Minimal web server using netcat
 
-`while true ; do nc -l -p 80 -c 'echo -e "HTTP/1.1 302 Found\n \nContent-Type:application/json \nLocation:http://169.254.169.254/\n\n {\"a\":\"b\"}"'; done`
+`while true ; do nc -l -p 80 -c 'echo -e "HTTP/1.1 302 Found\nContent-Type: application/json\nLocation: http://169.254.169.254/\n{\"a\":\"b\"}"'; done`
+
+`while true ; do nc -l -p 554 -c 'echo -e "RTSP/1.0 301 Moved\nCSeq: 1\nLocation: http://169.254.169.254/"'; done`
 
 ***
 
