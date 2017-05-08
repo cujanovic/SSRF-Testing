@@ -90,6 +90,16 @@ nslookup ssrf-race-169.254.169.254.localdomain.pw
 
 ***
 
+### DNS Rebinding
+
+pip install twised
+
+python dns.py
+
+http://webcache.googleusercontent.com/search?q=cache:http://www.611eternity.com/DNSRebinding%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/
+
+***
+
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing
 
 ***
