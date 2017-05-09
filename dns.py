@@ -1,5 +1,7 @@
 #encoding: utf-8
 from __future__ import print_function
+from builtins import str
+import ipaddress
 import datetime
 import re
 import os
@@ -10,6 +12,7 @@ from twisted.python.runtime import platform
 
 TTL = 0
 dict = {}
+dont_print_ip_range = '74.125.0.0/16'
 
 def search_file_for_all(hosts_file, name):
 	results = []
@@ -23,8 +26,9 @@ def search_file_for_all(hosts_file, name):
 		dict[name] = 0
 	dict[name] += 1
 
-	print('Response: ', name.decode('utf-8'), ' -> ', ip, sep='')
-	print('---------------------------------------------------------------------------------')
+	print('================================================================================================')
+	print('Response with A record: ', name.decode('utf-8'), ' -> ', ip, sep='')
+	print('================================================================================================')
 
 	results.append(hosts_module.nativeString(ip))
 	return results
@@ -38,17 +42,21 @@ class Resolver(hosts_module.Resolver):
 		])
 class PrintClientAddressDNSServerFactory(server.DNSServerFactory):
 	def buildProtocol(self, addr):
-		print('---------------------------------------------------------------------------------')
-		print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
-		print("Request: Connection to DNSServerFactory from: ", addr.host," on port: ",addr.port," using ",addr.type,sep='')
+		if (ipaddress.ip_address(u"%s" % str(addr.host)) in ipaddress.ip_network(u"%s" % str(dont_print_ip_range))) == False:
+			print('------------------------------------------------------------------------------------------------')
+			print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
+			print("Request: Connection to DNSServerFactory from: ", addr.host," on port: ",addr.port," using ",addr.type,sep='')
+			print('------------------------------------------------------------------------------------------------')
 		return server.DNSServerFactory.buildProtocol(self, addr)
 
 
 class PrintClientAddressDNSDatagramProtocol(dns.DNSDatagramProtocol):
 	def datagramReceived(self, datagram, addr):
-		print('---------------------------------------------------------------------------------')
-		print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
-		print("Request: Datagram to DNSDatagramProtocol from: ", addr[0], " on port: ", addr[1], sep='')
+		if (ipaddress.ip_address(u"%s" % str(addr[0])) in ipaddress.ip_network(u"%s" % str(dont_print_ip_range))) == False:
+			print('------------------------------------------------------------------------------------------------')
+			print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
+			print("Request: Datagram to DNSDatagramProtocol from: ", addr[0], " on port: ", addr[1], sep='')
+			print('------------------------------------------------------------------------------------------------')
 		return dns.DNSDatagramProtocol.datagramReceived(self, datagram, addr)
 
 def create_resolver(servers=None, resolvconf=None, hosts=None):
