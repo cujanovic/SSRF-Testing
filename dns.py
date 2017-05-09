@@ -1,4 +1,6 @@
- #encoding: utf-8
+#encoding: utf-8
+from __future__ import print_function
+import datetime
 import re
 import os
 import sys
@@ -21,7 +23,8 @@ def search_file_for_all(hosts_file, name):
 		dict[name] = 0
 	dict[name] += 1
 
-	print(name, '->', ip)
+	print('Response: ', name.decode('utf-8'), ' -> ', ip, sep='')
+	print('---------------------------------------------------------------------------------')
 
 	results.append(hosts_module.nativeString(ip))
 	return results
@@ -33,6 +36,20 @@ class Resolver(hosts_module.Resolver):
 			for addr in search_file_for_all(hosts_module.FilePath(self.file), name)
 			if hosts_module.isIPAddress(addr)
 		])
+class PrintClientAddressDNSServerFactory(server.DNSServerFactory):
+	def buildProtocol(self, addr):
+		print('---------------------------------------------------------------------------------')
+		print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
+		print("Request: Connection to DNSServerFactory from: ", addr.host," on port: ",addr.port," using ",addr.type,sep='')
+		return server.DNSServerFactory.buildProtocol(self, addr)
+
+
+class PrintClientAddressDNSDatagramProtocol(dns.DNSDatagramProtocol):
+	def datagramReceived(self, datagram, addr):
+		print('---------------------------------------------------------------------------------')
+		print("ServerTime: ",datetime.datetime.now().strftime("%H:%M:%S.%f %d-%m-%Y"), sep='')
+		print("Request: Datagram to DNSDatagramProtocol from: ", addr[0], " on port: ", addr[1], sep='')
+		return dns.DNSDatagramProtocol.datagramReceived(self, datagram, addr)
 
 def create_resolver(servers=None, resolvconf=None, hosts=None):
 	if platform.getType() == 'posix':
@@ -54,11 +71,10 @@ def create_resolver(servers=None, resolvconf=None, hosts=None):
 
 
 def main(port):
-	factory = server.DNSServerFactory(
+	factory = PrintClientAddressDNSServerFactory(
 		clients=[create_resolver(servers=[('8.8.8.8', 53)], hosts='hosts')],
 	)
-	protocol = dns.DNSDatagramProtocol(controller=factory)
-
+	protocol = PrintClientAddressDNSDatagramProtocol(controller=factory)
 	reactor.listenUDP(port, protocol)
 	reactor.listenTCP(port, factory)
 	reactor.run()
