@@ -3,7 +3,6 @@ from __future__ import print_function
 from builtins import str
 import ipaddress
 import datetime
-import re
 import os
 import sys
 from twisted.names import client, dns, server, hosts as hosts_module, root, cache, resolve
