@@ -36,7 +36,7 @@ xml 301 response without and with a valid response body:
 
 ***
 
-### custom-30x - Custom 30x responses and Location header with php
+### custom-30x - Custom 30x responses and Location header with PHP
 
 #### Live demo:
 
@@ -44,7 +44,7 @@ xml 301 response without and with a valid response body:
 
 ***
 
-### custom-200 - Custom 200 response and Content-Location header with php
+### custom-200 - Custom 200 response and Content-Location header with PHP
 
 #### Live demo:
 
@@ -52,7 +52,7 @@ xml 301 response without and with a valid response body:
 
 ***
 
-### custom-201 - Custom 201 response and Location header with php
+### custom-201 - Custom 201 response and Location header with PHP
 
 #### Live demo:
 
