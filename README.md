@@ -112,6 +112,12 @@ http://webcache.googleusercontent.com/search?q=cache:https://shiftordie.de/blog/
 
 ***
 
+### SSRF + Gopher + Redis
+
+http://webcache.googleusercontent.com/search?q=cache:http://vinc.top/2016/11/24/%E3%80%90ssrf%E3%80%91ssrfgopher%E6%90%9E%E5%AE%9A%E5%86%85%E7%BD%91%E6%9C%AA%E6%8E%88%E6%9D%83redis/
+
+***
+
 ### AppSecEU15-Server_side_browsing_considered_harmful.pdf
 https://www.youtube.com/watch?v=8t5-A4ASTIU
 
