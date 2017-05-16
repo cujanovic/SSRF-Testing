@@ -98,7 +98,6 @@ def create_resolver(servers=None, resolvconf=None, hosts=None):
 		bootstrap = client._ThreadedResolverImpl(reactor)
 		host_resolver = Resolver(hosts)
 		the_resolver = root.bootstrap(bootstrap, resolverFactory=client.Resolver)
-
 	return resolve.ResolverChain([host_resolver, cache.CacheResolver(), the_resolver])
 
 def main(port):
