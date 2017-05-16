@@ -116,6 +116,8 @@ http://webcache.googleusercontent.com/search?q=cache:https://shiftordie.de/blog/
 
 http://webcache.googleusercontent.com/search?q=cache:http://vinc.top/2016/11/24/%E3%80%90ssrf%E3%80%91ssrfgopher%E6%90%9E%E5%AE%9A%E5%86%85%E7%BD%91%E6%9C%AA%E6%8E%88%E6%9D%83redis/
 
+http://antirez.com/news/96
+
 ***
 
 ### AppSecEU15-Server_side_browsing_considered_harmful.pdf
