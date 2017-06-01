@@ -94,7 +94,9 @@ nslookup ssrf-race-169.254.169.254.localdomain.pw
 
 pip install twised
 
-python dns.py
+python dns.py WhitelistedIP InternalIP Port
+
+python dns.py 216.58.214.206 169.254.169.254 53
 
 http://webcache.googleusercontent.com/search?q=cache:http://www.611eternity.com/DNSRebinding%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/
 

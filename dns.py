@@ -13,6 +13,9 @@ TTL = 0
 dict = {}
 dont_print_ip_range = '74.125.0.0/16'
 FILENAME = "dns-log-" + str(datetime.datetime.now().strftime("%H-%M-%S.%f-%d-%m-%Y"))+'.log'
+WHITELISTEDIP = ''
+INTERNALIP = ''
+PORT = 53
 
 def OpenLogFile():
 	global f
@@ -28,9 +31,9 @@ def CloseLogFile():
 def search_file_for_all(hosts_file, name):
 	results = []
 	if name not in dict or dict[name] < 1:
-		ip = '216.58.214.206'
+		ip = WHITELISTEDIP
 	else:
-		ip = '169.254.169.254'
+		ip = INTERNALIP
 	if name not in dict:
 		dict[name] = 0
 	dict[name] += 1
@@ -105,13 +108,20 @@ def main(port):
 		clients=[create_resolver(servers=[('8.8.8.8', 53)], hosts='hosts')],
 	)
 	protocol = PrintClientAddressDNSDatagramProtocol(controller=factory)
-	reactor.listenUDP(port, protocol)
-	reactor.listenTCP(port, factory)
+	reactor.listenUDP(PORT, protocol)
+	reactor.listenTCP(PORT, factory)
+	print('------------------------------------------------------------------------------------------------')
+	print("DNS Server started...\nListening on port: "+ str(PORT) +"\nLog file name: "+ FILENAME +"\nNot showing/logging requests from IP range: "+ dont_print_ip_range)
+	print('------------------------------------------------------------------------------------------------\n\n')
 	reactor.run()
 
 if __name__ == '__main__':
-	if len(sys.argv) < 2 or not sys.argv[1].isdigest():
-		port = 53
+	if len(sys.argv) != 4:
+		print("Usage: python "+sys.argv[0]+" WhitelistedIP InternalIP Port")
+		print ("Example: python "+sys.argv[0]+" 216.58.214.206 169.254.169.254 53")
+		exit(1)
 	else:
-		port = int(sys.argv[1])
-	main(port)
+		WHITELISTEDIP = sys.argv[1]
+		INTERNALIP = sys.argv[2]
+		PORT = int(sys.argv[3])
+	main(PORT)
