@@ -122,6 +122,12 @@ http://antirez.com/news/96
 
 ***
 
+### Top 5 features that are often prone to SSRF vulnerabilities:
+
+https://webcache.googleusercontent.com/search?q=cache:https://www.hackerone.com/blog-How-To-Server-Side-Request-Forgery-SSRF
+
+***
+
 ### AppSecEU15-Server_side_browsing_considered_harmful.pdf
 https://www.youtube.com/watch?v=8t5-A4ASTIU
 
