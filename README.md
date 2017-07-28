@@ -137,6 +137,10 @@ https://www.youtube.com/watch?v=8t5-A4ASTIU
 
 ***
 
+### us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf
+
+***
+
 ### SSRF bible
 https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM
 
