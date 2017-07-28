@@ -70,11 +70,11 @@ xml 301 response without and with a valid response body:
 
 ### ip.py - Alternate IP encoding tool useful for SSRF Testing
 
-python ip.py IP WhiteListedDomain EXPORT(optional)
+python ip.py IP PORT WhiteListedDomain EXPORT(optional)
 
-python ip.py 169.254.169.254 www.google.com
+python ip.py 169.254.169.254 80 www.google.com
 
-python ip.py 169.254.169.254 www.google.com export
+python ip.py 169.254.169.254 80 www.google.com export
 
 ***
 
