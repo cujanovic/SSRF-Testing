@@ -1,0 +1,60 @@
+# Set minimal xml response body
+ErrorDocument 300 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 301 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 302 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 303 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 305 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 307 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+ErrorDocument 308 '<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Title</heading><body>Test</body></note>'
+
+# 300 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/300-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/300-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 300-([^/-]*)-(.*).x.xml$
+RewriteRule 300-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=300,NC]
+
+# 301 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/301-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/301-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 301-([^/-]*)-(.*).x.xml$
+RewriteRule 301-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=301,NC]
+
+# 302 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/302-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/302-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 302-([^/-]*)-(.*).x.xml$
+RewriteRule 302-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=302,NC]
+
+# 303 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/303-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/303-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 303-([^/-]*)-(.*).x.xml$
+RewriteRule 303-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/305-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/305-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-(.*).x.xml$
+RewriteRule 305-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=305,NC]
+
+# 307 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/307-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/307-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 307-([^/-]*)-(.*).x.xml$
+RewriteRule 307-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=307,NC]
+
+# 308 with response body
+# https://ssrf.localdomain.pw/xml-with-body-md/308-http-.x.xml
+# https://ssrf.localdomain.pw/xml-with-body-md/308-http-test/.x.xml
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 308-([^/-]*)-(.*).x.xml$
+RewriteRule 308-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=308,NC]
+
+# Always set the Content-Type header text/xml
+Header always set Content-Type text/xml

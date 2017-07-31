@@ -11,28 +11,44 @@ jpg 301 response without and with a valid response body:
 
 `https://ssrf.localdomain.pw/img-without-body/301-http-169.254.169.254:80-.i.jpg`
 
-`https://ssrf.localdomain.pw/img-with-body/301-https-169.254.169.254:80-.i.jpg`
+`https://ssrf.localdomain.pw/img-without-body-md/301-http-.i.jpg`
+
+`https://ssrf.localdomain.pw/img-with-body/301-http-169.254.169.254:80-.i.jpg`
+
+`https://ssrf.localdomain.pw/img-with-body-md/301-http-.i.jpg`
 
 
 json 301 response without and with a valid response body:
 
 `https://ssrf.localdomain.pw/json-without-body/301-http-169.254.169.254:80-.j.json`
 
+`https://ssrf.localdomain.pw/json-without-body-md/301-http-.j.json`
+
 `https://ssrf.localdomain.pw/json-with-body/301-http-169.254.169.254:80-.j.json`
+
+`https://ssrf.localdomain.pw/json-with-body-md/301-http-.j.json`
 
 
 csv 301 response without and with a valid response body:
 
-`https://ssrf.localdomain.pw/csv-without-body/301-https-169.254.169.254:80-.c.csv`
+`https://ssrf.localdomain.pw/csv-without-body/301-http-169.254.169.254:80-.c.csv`
 
-`https://ssrf.localdomain.pw/csv-with-body/301-https-169.254.169.254:80-.c.csv`
+`https://ssrf.localdomain.pw/csv-without-body-md/301-http-.c.csv`
+
+`https://ssrf.localdomain.pw/csv-with-body/301-http-169.254.169.254:80-.c.csv`
+
+`https://ssrf.localdomain.pw/csv-with-body-md/301-http-.c.csv`
 
 
 xml 301 response without and with a valid response body:
 
 `https://ssrf.localdomain.pw/xml-without-body/301-http-169.254.169.254:80-.x.xml`
 
+`https://ssrf.localdomain.pw/xml-without-body-md/301-http-.x.xml`
+
 `https://ssrf.localdomain.pw/xml-with-body/301-http-169.254.169.254:80-.x.xml`
+
+`https://ssrf.localdomain.pw/xml-with-body-md/301-http-.x.xml`
 
 ***
 
