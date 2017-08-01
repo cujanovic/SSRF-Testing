@@ -58,3 +58,5 @@ RewriteRule 308-([^/-]*)-([^/-]*)-(.*).x.xml$ $1://$2/$3 [L,R=308,NC]
 
 # Always set the Content-Type header text/xml
 Header always set Content-Type text/xml
+# Always set Cache-Control to no-cache
+Header always set Cache-Control no-cache

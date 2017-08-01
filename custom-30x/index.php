@@ -4,4 +4,5 @@
 header("HTTP/1.1 ".$_GET["code"]." Found");
 header("Location: ".$_GET["url"]);
 header("Content-Type:".base64_decode($_GET["content-type"]));
+header("Cache-Control: no-cache");
 echo base64_decode($_GET[body]);

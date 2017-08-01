@@ -58,3 +58,5 @@ RewriteRule 308-([^/-]*)-([^/-]*)-(.*).j.json$ $1://$2/$3 [L,R=308,NC]
 
 # Always set the Content-Type header application/json
 Header always set Content-Type application/json
+# Always set Cache-Control to no-cache
+Header always set Cache-Control no-cache
