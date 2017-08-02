@@ -134,6 +134,10 @@ https://hackerone.com/reports/243470
 
 https://github.com/neex/ffmpeg-avi-m3u-xbin
 
+https://www.blackhat.com/docs/us-16/materials/us-16-Ermishkin-Viral-Video-Exploiting-Ssrf-In-Video-Converters.pdf
+
+https://docs.google.com/presentation/d/1yqWy_aE3dQNXAhW8kxMxRqtP7qMHaIfMzUDpEqFneos/edit#slide=id.g22371f2702_0_15
+
 ***
 
 ### Java/Python FTP Injections Allow for Firewall Bypass
