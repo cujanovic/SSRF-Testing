@@ -126,6 +126,16 @@ http://webcache.googleusercontent.com/search?q=cache:http://www.611eternity.com/
 
 ***
 
+### ffmpeg - SSRF with ffmpeg
+
+https://hackerone.com/reports/237381
+
+https://hackerone.com/reports/243470
+
+https://github.com/neex/ffmpeg-avi-m3u-xbin
+
+***
+
 ### Java/Python FTP Injections Allow for Firewall Bypass
 
 http://webcache.googleusercontent.com/search?q=cache:http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html
