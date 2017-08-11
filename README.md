@@ -171,6 +171,11 @@ https://www.youtube.com/watch?v=8t5-A4ASTIU
 
 ***
 
+### SSRF Tips
+http://blog.safebuff.com/2016/07/03/SSRF-Tips/
+
+***
+
 ### SSRF bible
 https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM
 
