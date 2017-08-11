@@ -172,7 +172,7 @@ https://www.youtube.com/watch?v=8t5-A4ASTIU
 ***
 
 ### SSRF Tips
-http://blog.safebuff.com/2016/07/03/SSRF-Tips/
+http://webcache.googleusercontent.com/search?q=cache:http://blog.safebuff.com/2016/07/03/SSRF-Tips/
 
 ***
 
