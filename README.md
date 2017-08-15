@@ -140,6 +140,14 @@ https://docs.google.com/presentation/d/1yqWy_aE3dQNXAhW8kxMxRqtP7qMHaIfMzUDpEqFn
 
 ***
 
+### iframe - SSRF with html iframe + URL bypass
+
+#### Live demo:
+
+`http://ssrf.localdomain.pw/iframe/?proto=http&ip=127.0.0.1&port=80&url=/`
+
+***
+
 ### Java/Python FTP Injections Allow for Firewall Bypass
 
 http://webcache.googleusercontent.com/search?q=cache:http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html

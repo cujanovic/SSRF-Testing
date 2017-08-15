@@ -41,9 +41,13 @@ def validIP(address):
 	parts = address.split(".")
 	if len(parts) != 4:
 		return False
-	for item in parts:
-		if not 0 <= int(item) <= 255:
-			return False
+	try:
+		for item in parts:
+			if not 0 <= int(item) <= 255:
+				return False
+	except ValueError:
+		print("\nUsage: python "+sys.argv[0]+" IP EXPORT(optional)\nUsage: python "+sys.argv[0]+" 169.254.169.254\nUsage: python "+sys.argv[0]+" 169.254.169.254 export")
+		exit(1)
 	return True
 
 if len(sys.argv) < 4 or len(sys.argv) >= 6:
