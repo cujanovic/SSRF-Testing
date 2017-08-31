@@ -1,4 +1,4 @@
-# SSRF(Server Side Request Forgery) Testing resources
+# SSRF(Server Side Request Forgery) testing resources
 
 ***
 
