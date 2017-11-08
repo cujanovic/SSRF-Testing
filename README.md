@@ -197,6 +197,12 @@ https://www.youtube.com/watch?v=D1S-G8rJrEk
 
 ***
 
+### A tiny and cute URL fuzzer 
+
+https://github.com/orangetw/Tiny-URL-Fuzzer
+
+***
+
 ### SSRF Tips
 http://webcache.googleusercontent.com/search?q=cache:http://blog.safebuff.com/2016/07/03/SSRF-Tips/
 
