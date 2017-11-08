@@ -189,6 +189,7 @@ https://www.youtube.com/watch?v=8t5-A4ASTIU
 ***
 
 ### us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf
+https://www.youtube.com/watch?v=D1S-G8rJrEk
 
 ***
 
