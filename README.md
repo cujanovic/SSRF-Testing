@@ -111,6 +111,18 @@ python ip.py 169.254.169.254 80 www.google.com export
 
 nslookup ssrf-169.254.169.254.localdomain.pw
 
+nslookup ssrf-cloud.localdomain.pw
+
+http://xip.io/
+
+nslookup 169.254.169.254.xip.io
+
+nslookup 1ynrnhl.xip.io
+
+nslookup www.owasp.org.1ynrnhl.xip.io
+
+nslookup 127.127.127.127.xip.io
+
 ***
 
 ### DNS pinning race condition
@@ -197,9 +209,25 @@ https://www.youtube.com/watch?v=D1S-G8rJrEk
 
 ***
 
-### A tiny and cute URL fuzzer 
+### A tiny and cute URL fuzzer
 
 https://github.com/orangetw/Tiny-URL-Fuzzer
+
+***
+
+### Bypassing Server-Side Request Forgery filters by abusing a bug in Ruby's native resolver
+
+https://edoverflow.com/2017/ruby-resolv-bug/
+
+https://hackerone.com/reports/287245
+
+https://hackerone.com/reports/215105
+
+0177.1 => 127.0.0.1
+
+0x7f.1 => 127.0.0.1
+
+127.1 => 127.0.0.1
 
 ***
 
