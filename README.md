@@ -181,6 +181,8 @@ https://docs.google.com/presentation/d/1yqWy_aE3dQNXAhW8kxMxRqtP7qMHaIfMzUDpEqFn
 
 http://webcache.googleusercontent.com/search?q=cache:http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html
 
+https://github.com/ecbftw/poc/blob/master/java-python-ftp-injection/ftp-injection-server.py
+
 http://webcache.googleusercontent.com/search?q=cache:https://shiftordie.de/blog/2017/02/18/smtp-over-xxe/
 
 ***
