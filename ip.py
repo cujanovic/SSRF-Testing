@@ -656,6 +656,18 @@ print("\n",sep='')
 if EXPORTRESULTS == 'export':
 	print('http://ß.localdomain.pw/',file=f,sep='')
 
+#Case 14 - Abusing 。and ｡
+IPAddressParts = arg1.split(".")
+print(bluecolor,"Abusing 。and ｡: ",resetcolor,yellowcolor,"http://",IPAddressParts[0],"。",IPAddressParts[1],"。",IPAddressParts[2],"。",IPAddressParts[3],"/",resetcolor," and " ,yellowcolor,"http://",IPAddressParts[0],"｡",IPAddressParts[1],"｡",IPAddressParts[2],"｡",IPAddressParts[3],"/", resetcolor,' -> ',yellowcolor,"http://",IPAddressParts[0],".",IPAddressParts[1],".",IPAddressParts[2],".",IPAddressParts[3],"/",resetcolor,sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print('http://',IPAddressParts[0],'。',IPAddressParts[1],'。',IPAddressParts[2],'。',IPAddressParts[3],'/',sep='')
+print('http://',IPAddressParts[0],'｡',IPAddressParts[1],'｡',IPAddressParts[2],'｡',IPAddressParts[3],'/',sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print("\n",sep='')
+if EXPORTRESULTS == 'export':
+	print('http://',IPAddressParts[0],'。',IPAddressParts[1],'。',IPAddressParts[2],'。',IPAddressParts[3],'/',file=f,sep='')
+	print('http://',IPAddressParts[0],'｡',IPAddressParts[1],'｡',IPAddressParts[2],'｡',IPAddressParts[3],'/',file=f,sep='')
+
 if EXPORTRESULTS == 'export':
 	f.close()
 	print("\n",bluecolor,'-----------------------------------------------------------------------------------------------------------------------------------------',resetcolor,sep='')
