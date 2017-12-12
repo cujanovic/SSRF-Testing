@@ -56,4 +56,5 @@ http://169.254.169.254/metadata/instance?api-version=2017-04-02
 http://169.254.169.254/metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2017-04-02&format=text
 
 
+
 Source - https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
