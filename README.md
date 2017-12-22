@@ -276,3 +276,10 @@ http://webcache.googleusercontent.com/search?q=cache:http://blog.safebuff.com/20
 https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM
 
 ***
+
+### SSRF Proxy
+https://github.com/bcoles/ssrf_proxy
+
+SSRF Proxy facilitates tunneling HTTP communications through servers vulnerable to Server-Side Request Forgery
+
+***
