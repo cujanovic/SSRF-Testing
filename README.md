@@ -272,6 +272,11 @@ http://webcache.googleusercontent.com/search?q=cache:http://blog.safebuff.com/20
 
 ***
 
+### PHP SSRF Techniques
+https://medium.com/secjuice/php-ssrf-techniques-9d422cb28d51
+
+***
+
 ### SSRF bible
 https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM
 
