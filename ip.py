@@ -144,6 +144,10 @@ def PrintAndWrite(IPAddress):
 	print('http://',IPAddress,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',sep='')
 	print('http://',RANDOMPREFIXVALIDSITE,'@@',IPAddress,':',PORT,'/',sep='')
 	print('http://',RANDOMPREFIXVALIDSITE,'@@@',IPAddress,':',PORT,'/',sep='')
+	print('0://',IPAddress,':',PORT,';',RANDOMPREFIXVALIDSITE,':80','/',sep='')
+	print('http://',IPAddress,':',PORT,';',RANDOMPREFIXVALIDSITE,':80','/',sep='')
+	print('0://',IPAddress,':',PORT,',',RANDOMPREFIXVALIDSITE,':80','/',sep='')
+	print('http://',IPAddress,':',PORT,',',RANDOMPREFIXVALIDSITE,':80','/',sep='')
 	print(greencolor,'=========================================================================================================================================',resetcolor,sep='')
 	print("\n",sep='')
 	if EXPORTRESULTS == 'export':
@@ -169,6 +173,10 @@ def PrintAndWrite(IPAddress):
 		print('http://',IPAddress,'%20',RANDOMPREFIXVALIDSITE,':',PORT,'/',file=f,sep='')
 		print('http://',RANDOMPREFIXVALIDSITE,'@@',IPAddress,':',PORT,'/',file=f,sep='')
 		print('http://',RANDOMPREFIXVALIDSITE,'@@@',IPAddress,':',PORT,'/',file=f,sep='')
+		print('0://',IPAddress,':',PORT,';',RANDOMPREFIXVALIDSITE,':80','/',file=f,sep='')
+		print('http://',IPAddress,':',PORT,';',RANDOMPREFIXVALIDSITE,':80','/',file=f,sep='')
+		print('0://',IPAddress,':',PORT,',',RANDOMPREFIXVALIDSITE,':80','/',file=f,sep='')
+		print('http://',IPAddress,':',PORT,',',RANDOMPREFIXVALIDSITE,':80','/',file=f,sep='')
 
 def PrintAndWriteUnicode(IP1, IP2, IP3, IP4, IP5, IP6, IP7, IP13, IP8, IP14, IP9, IP10, IP11, IP12):
 	print('http://',convertIP2RandomUnicodeValue(),'/',sep='')
