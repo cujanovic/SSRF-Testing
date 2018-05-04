@@ -60,3 +60,7 @@ RewriteRule 308-([^/-]*)-(.*).x.xml$ $1://169.254.169.254/$2 [L,R=308,NC]
 Header always set Content-Type text/html
 # Always set Cache-Control to no-cache
 Header always set Cache-Control no-cache
+# Always set Cache-Control to no-store
+Header always set Cache-Control no-store
+# Always set Pragma to no-cache
+Header always set Pragma no-cache
