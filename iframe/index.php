@@ -1,8 +1,7 @@
 <?php
 #http://ssrf.localdomain.pw/iframe/?proto=http&ip=127.0.0.1&port=80&url=/
 header("Content-Type: text/html");
-header("Cache-Control: no-cache");
-header("Cache-Control: no-store");
+header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 
 echo '<html><body>';

@@ -4,7 +4,6 @@
 header("HTTP/1.1 200 OK");
 header("Content-Location: ".$_GET["url"]);
 header("Content-Type:".base64_decode($_GET["content-type"]));
-header("Cache-Control: no-cache");
-header("Cache-Control: no-store");
+header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 echo base64_decode($_GET["body"]);
