@@ -288,3 +288,15 @@ https://github.com/bcoles/ssrf_proxy
 SSRF Proxy facilitates tunneling HTTP communications through servers vulnerable to Server-Side Request Forgery
 
 ***
+
+### Overly Permissive Proxy
+https://www.nginx.com/blog/trust-no-one-perils-of-trusting-user-input/
+
+curl http://remote-ip-address/latest/meta-data/ -H "Host: 169.154.169.254"
+
+***
+
+### All you need to know about SSRF and how may we write tools to do auto-detect
+https://medium.com/bugbountywriteup/the-design-and-implementation-of-ssrf-attack-framework-550e9fda16ea
+
+***
