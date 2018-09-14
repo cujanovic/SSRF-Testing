@@ -141,6 +141,8 @@ python dns.py 216.58.214.206 169.254.169.254 53
 
 http://webcache.googleusercontent.com/search?q=cache:http://www.611eternity.com/DNSRebinding%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/
 
+DNS Rebinding Exploitation Framework - https://github.com/mwrlabs/dref
+
 ***
 
 ### cloud-metadata.txt - Cloud Metadata Dictionary useful for SSRF Testing
@@ -292,6 +294,12 @@ https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM
 https://github.com/bcoles/ssrf_proxy
 
 SSRF Proxy facilitates tunneling HTTP communications through servers vulnerable to Server-Side Request Forgery
+
+***
+
+### SSRF via Request Splitting
+
+https://www.rfk.id.au/blog/entry/security-bugs-ssrf-via-request-splitting/
 
 ***
 
