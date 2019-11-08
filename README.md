@@ -123,6 +123,18 @@ nslookup www.owasp.org.1ynrnhl.xip.io
 
 nslookup 127.127.127.127.xip.io
 
+https://nip.io/
+
+nslookup 169.254.169.254.nip.io
+
+nslookup app-169-254-169-254.nip.io
+
+nslookup owasp.org.169.254.169.254.nip.io
+
+nslookup customer2-app-169-254-169-254.nip.io
+
+nslookup 127.127.127.127.nip.io
+
 ***
 
 ### DNS pinning race condition
