@@ -328,6 +328,6 @@ https://medium.com/bugbountywriteup/the-design-and-implementation-of-ssrf-attack
 ***
 
 ### Gopherus - This tool generates gopher link for doing SSRF and RCE in various servers
-https://spyclub.tech/2018/blog-on-gopherus/
+https://spyclub.tech/2018/08/14/2018-08-14-blog-on-gopherus/
 
 ***
