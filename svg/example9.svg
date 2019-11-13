@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="6000" height="6000">
+  <g>
+    <foreignObject width="6000" height="6000">
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <iframe src="http://127.0.0.1:22/"></iframe>
+      </body>
+    </foreignObject>
+  </g>
+</svg>
