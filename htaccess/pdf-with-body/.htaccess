@@ -1,0 +1,63 @@
+ErrorDocument 300 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 301 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 302 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 303 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 305 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 307 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+ErrorDocument 308 "%PDF-1.0\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj 2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj 3 0 obj<</Type/Page/MediaBox[0 0 3 3]>>endobj\ntrailer<</Size 4/Root 1 0 R>>"
+
+# 300 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/300-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/300-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 300-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 300-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=300,NC]
+
+# 301 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/301-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/301-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 301-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 301-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=301,NC]
+
+# 302 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/302-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/302-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 302-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 302-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=302,NC]
+
+# 303 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/303-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/303-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 303-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 303-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=303,NC]
+
+# 305 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/305-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/305-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 305-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=305,NC]
+
+# 307 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/307-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/307-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 307-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 307-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=307,NC]
+
+# 308 with response body
+# https://ssrf.localdomain.pw/pdf-with-body/308-http-169.254.169.254:80-.p.pdf
+# https://ssrf.localdomain.pw/pdf-with-body/308-http-169.254.169.254:80-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 308-([^/-]*)-([^/-]*)-(.*).p.pdf$
+RewriteRule 308-([^/-]*)-([^/-]*)-(.*).p.pdf$ $1://$2/$3 [L,R=308,NC]
+
+# Always set the Content-Type header application/pdf
+Header always set Content-Type application/pdf
+# Always set Cache-Control to no-cache no-store must-revalidate
+Header always set Cache-Control "no-store, no-cache, must-revalidate"
+# Always set Pragma to no-cache
+Header always set Pragma no-cache

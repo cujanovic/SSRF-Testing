@@ -1,0 +1,64 @@
+# Set blank response body
+ErrorDocument 300 " "
+ErrorDocument 301 " "
+ErrorDocument 302 " "
+ErrorDocument 303 " "
+ErrorDocument 305 " "
+ErrorDocument 307 " "
+ErrorDocument 308 " "
+
+# 300 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/300-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/300-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 300-([^/-]*)-(.*).p.pdf$
+RewriteRule 300-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=300,NC]
+
+# 301 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/301-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/301-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 301-([^/-]*)-(.*).p.pdf$
+RewriteRule 301-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=301,NC]
+
+# 302 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/302-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/302-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 302-([^/-]*)-(.*).p.pdf$
+RewriteRule 302-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=302,NC]
+
+# 303 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/303-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/303-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 303-([^/-]*)-(.*).p.pdf$
+RewriteRule 303-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=303,NC]
+
+# 305 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/305-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/305-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 305-([^/-]*)-(.*).p.pdf$
+RewriteRule 305-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=305,NC]
+
+# 307 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/307-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/307-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 307-([^/-]*)-(.*).p.pdf$
+RewriteRule 307-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=307,NC]
+
+# 308 without response body
+# https://ssrf.localdomain.pw/pdf-without-body-md/308-http-.p.pdf
+# https://ssrf.localdomain.pw/pdf-without-body-md/308-http-test/.p.pdf
+RewriteEngine on
+RewriteCond %{REQUEST_URI} 308-([^/-]*)-(.*).p.pdf$
+RewriteRule 308-([^/-]*)-(.*).p.pdf$ $1://169.254.169.254/$2 [L,R=308,NC]
+
+# Always set the Content-Type header text/html
+Header always set Content-Type text/html
+# Always set Cache-Control to no-cache no-store must-revalidate
+Header always set Cache-Control "no-store, no-cache, must-revalidate"
+# Always set Pragma to no-cache
+Header always set Pragma no-cache

