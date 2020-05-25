@@ -241,6 +241,12 @@ https://ssrf.localdomain.pw/ssrf2smtp/?proto=gopher&ip=0&port=25&domain=domain.c
 
 ***
 
+### Schemes-List.xlsx - 800 of known schemas + useful references
+
+https://github.com/irsdl/OutlookLeakTest/blob/master/Schemes-List.xlsx?raw=true
+
+***
+
 ### Java/Python FTP Injections Allow for Firewall Bypass
 
 http://webcache.googleusercontent.com/search?q=cache:http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html
