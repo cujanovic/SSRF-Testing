@@ -271,6 +271,13 @@ https://webcache.googleusercontent.com/search?q=cache:https://www.hackerone.com/
 
 ***
 
+### Joshua Maddux - When TLS Hacks You
+
+https://www.youtube.com/watch?v=qGpAJxfADjo
+https://github.com/jmdx/TLS-poison
+
+***
+
 ### AppSecEU15-Server_side_browsing_considered_harmful.pdf
 https://www.youtube.com/watch?v=8t5-A4ASTIU
 
