@@ -13,6 +13,8 @@
 
 `http://127.88.23.245:22/#@www.google.com:80/`
 
+`http://google.com:80\\@127.88.23.245:22/`
+
 ***
 
 ### htaccess - redirect test for various cases
