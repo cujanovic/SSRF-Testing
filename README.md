@@ -363,3 +363,8 @@ https://medium.com/bugbountywriteup/the-design-and-implementation-of-ssrf-attack
 https://spyclub.tech/2018/08/14/2018-08-14-blog-on-gopherus/
 
 ***
+
+### A Glossary of Blind SSRF Chains
+https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/
+
+***
