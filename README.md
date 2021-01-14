@@ -1,3 +1,6 @@
+<a href="https://www.buymeacoffee.com/cujanovic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+
 # SSRF (Server Side Request Forgery) testing resources
 
 ***
@@ -364,7 +367,11 @@ https://spyclub.tech/2018/08/14/2018-08-14-blog-on-gopherus/
 
 ***
 
+<<<<<<< HEAD
 ### A Glossary of Blind SSRF Chains
 https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/
 
 ***
+=======
+<a href="https://www.buymeacoffee.com/cujanovic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+>>>>>>> ff375f7f63a3f98ad19d75986df3292e9819ecef
