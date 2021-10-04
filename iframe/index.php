@@ -1,7 +1,7 @@
 <?php
 #http://ssrf.localdomain.pw/iframe/?proto=http&ip=127.0.0.1&port=80&url=/
 header("Content-Type: text/html");
-header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: max-age=0, must-revalidate, no-cache, no-store, private");
 header("Pragma: no-cache");
 
 if (filter_var($_GET["ip"], FILTER_VALIDATE_IP) && filter_var($_GET["port"], FILTER_VALIDATE_INT) && isset($_GET["proto"]) && isset($_GET["url"])){
