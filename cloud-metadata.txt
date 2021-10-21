@@ -50,3 +50,19 @@ http://169.254.169.254/opc/v1/instance/
 ## Alibaba Cloud
 # https://www.alibabacloud.com/help/doc-detail/49122.htm
 http://100.100.100.200/latest/meta-data/
+http://100.100.100.200/latest/meta-data/instance-id
+http://100.100.100.200/latest/meta-data/image-id
+
+## OpenStack/RackSpace 
+# (header required? unknown)
+http://169.254.169.254/openstack
+
+## HP Helion 
+# (header required? unknown)
+http://169.254.169.254/2009-04-04/meta-data/ 
+
+## Oracle Cloud
+# https://docs.oracle.com/cloud-machine/latest/stcomputecs/ELUSE/GUID-D0905B84-1B6D-4058-BA3D-4F7385B062C1.htm
+http://192.0.0.192/latest/user-data/
+http://192.0.0.192/latest/meta-data/
+http://192.0.0.192/latest/attributes/
