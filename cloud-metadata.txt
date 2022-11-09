@@ -53,6 +53,21 @@ http://100.100.100.200/latest/meta-data/
 http://100.100.100.200/latest/meta-data/instance-id
 http://100.100.100.200/latest/meta-data/image-id
 
+## Tencent Cloud
+# https://cloud.tencent.com/document/product/213/4934
+http://metadata.tencentyun.com/latest/meta-data/
+http://metadata.tencentyun.com/latest/meta-data/uuid
+
+## Huawei Cloud
+# https://support.huaweicloud.com/usermanual-ecs/ecs_03_0166.html
+http://169.254.169.254/openstack/latest/meta_data.json
+http://169.254.169.254/openstack/latest/user_data
+http://169.254.169.254/openstack/latest/network_data.json
+http://169.254.169.254/openstack/latest/securitykey
+http://169.254.169.254/latest/user-data
+http://169.254.169.254/latest/meta-data/public-ipv4
+http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+
 ## OpenStack/RackSpace 
 # (header required? unknown)
 http://169.254.169.254/openstack
